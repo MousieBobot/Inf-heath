@@ -1,33 +1,18 @@
-Scirpt:https:--[[
+local REGEN_RATE = 100/100 -- If you change these settings it will brake.
+local REGEN_STEP = 0 -- Don't Change These Settings!
+-- DON'T CHANGE!
+--------------------------------------------------------------------------------
  
+local Character = script.Parent
+local Humanoid = Character:WaitForChild'Humanoid'
  
- 
-                               ___________________
-                             /                                                  \
-------------------- | ----------- By lrd14 ------------- | -------------------
-                             \___________________  /
- 
- 
- 
- 
---]]
- 
-local plrOwner = workspace:WaitForChild('lrd14')
- 
-local HumanoidK = game.Players.LocalPlayer.Character.Humanoid
- 
-require(plrOwner)
- 
-health = HumanoidK.Health
-healthMax = HumanoidK.MaxHealth
- 
- 
---//Little script part
- 
-healthMax = 1000
- 
+--------------------------------------------------------------------------------
  
 while true do
-	health = 1000
-	wait(0.01)
+    while Humanoid.Health < Humanoid.MaxHealth do
+        local dt = wait(REGEN_STEP)
+        local dh = dt*REGEN_RATE*Humanoid.MaxHealth
+        Humanoid.Health = math.min(Humanoid.Health + dh, Humanoid.MaxHealth)
+    end
+    Humanoid.HealthChanged:Wait()
 end
