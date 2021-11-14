@@ -1,0 +1,33 @@
+Scirpt:https:--[[
+ 
+ 
+ 
+                               ___________________
+                             /                                                  \
+------------------- | ----------- By lrd14 ------------- | -------------------
+                             \___________________  /
+ 
+ 
+ 
+ 
+--]]
+ 
+local plrOwner = workspace:WaitForChild('lrd14')
+ 
+local HumanoidK = game.Players.LocalPlayer.Character.Humanoid
+ 
+require(plrOwner)
+ 
+health = HumanoidK.Health
+healthMax = HumanoidK.MaxHealth
+ 
+ 
+--//Little script part
+ 
+healthMax = 1000
+ 
+ 
+while true do
+	health = 1000
+	wait(0.01)
+end
