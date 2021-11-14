@@ -1,5 +1,5 @@
  
-local plrOwner = workspace:WaitForChild('lrd14')
+local plrOwner = workspace:WaitForChild('MousieBobot')
  
 local HumanoidK = game.Players.LocalPlayer.Character.Humanoid
  
